@@ -13,8 +13,6 @@ resource "aws_instance" "example" {
     Name = "react proj"
   }
 
-  # No count parameter, so only one instance will be managed by Terraform
-
   provisioner "remote-exec" {
     inline = [
       "sudo yum update -y",
